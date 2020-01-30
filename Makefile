@@ -6,7 +6,7 @@
 #    By: rofernan <rofernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by rofernan          #+#    #+#              #
-#    Updated: 2020/01/30 14:12:31 by rofernan         ###   ########.fr        #
+#    Updated: 2020/01/30 14:22:31 by rofernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME 				=	libasm.a
 
 OBJS_PATH			=	./objs
 
-LIBASM				=	ft_strlen.s
+LIBASM				=	ft_strlen.s \
+						ft_strcpy.s
 
 BONUS				=	
 
