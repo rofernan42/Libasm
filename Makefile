@@ -6,7 +6,7 @@
 #    By: rofernan <rofernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by rofernan          #+#    #+#              #
-#    Updated: 2020/01/30 16:32:25 by rofernan         ###   ########.fr        #
+#    Updated: 2020/01/30 16:39:26 by rofernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,10 @@ OBJS_PATH			=	./objs
 
 LIBASM				=	ft_strlen.s	\
 						ft_strcpy.s	\
-						ft_strcmp.s
+						ft_strcmp.s	\
+						ft_write.s	\
+						ft_read.s	\
+						ft_strdup.s
 
 BONUS				=	
 
