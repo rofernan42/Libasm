@@ -6,7 +6,7 @@
 #    By: rofernan <rofernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by rofernan          #+#    #+#              #
-#    Updated: 2020/01/30 14:22:31 by rofernan         ###   ########.fr        #
+#    Updated: 2020/01/30 16:32:25 by rofernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,9 @@ NAME 				=	libasm.a
 
 OBJS_PATH			=	./objs
 
-LIBASM				=	ft_strlen.s \
-						ft_strcpy.s
+LIBASM				=	ft_strlen.s	\
+						ft_strcpy.s	\
+						ft_strcmp.s
 
 BONUS				=	
 
@@ -57,7 +58,7 @@ fclean:					clean
 						rm -rf ./objs $(NAME) $(PROG)
 						@echo "\033[34m=== REPERTORY LIBASM CLEANED ===\033[0m"
 
-re:						fclean all
+re:						fclean all main
 
 .PHONY:					clean fclean re all bonus
 
