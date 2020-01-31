@@ -1,22 +1,16 @@
 global	_ft_strcmp
 section	.text
 _ft_strcmp:
-				xor		rcx, rcx			;
-				xor		rax, rax
-compbyte:
-				cmp		byte[rsi + rcx], 0
+				xor		rcx, rcx				; rcx <- 0
+compbyte:										; rdi = s1, rsi = s2
+				cmp		byte[rsi + rcx], 0		; check if end of string s2.
 				jz		endloop
-				cmp		byte[rdi + rcx], 0
-				jz		endloop		;
-				inc		rcx
-				jmp		compbyte
+				cmp		byte[rdi + rcx], 0		; check if end of string s1.
+				jz		endloop
+				inc		rcx						; rcx++
+				jmp		compbyte				; loop.
 endloop:
-				mov		al, [rdi + rcx]
-				sub		al, [rsi + rcx]
-				ret
-; inf:
-; 				sub		al, [rdi + rcx]
-; 				ret
-; sup:
-; 				sub		al, [rdi + rcx]
-; 				ret
+				movzx	rax, byte[rdi + rcx]	; movzx moves s1 in rax and completes remaining bits with 0.
+				movzx	rbx, byte[rsi + rcx]	; same in rbx.
+				sub		rax, rbx				; rax <- s1 - s2.
+				ret								; return rax.
