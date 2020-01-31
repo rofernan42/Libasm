@@ -6,13 +6,14 @@
 /*   By: rofernan <rofernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 12:05:52 by rofernan          #+#    #+#             */
-/*   Updated: 2020/01/31 14:49:18 by rofernan         ###   ########.fr       */
+/*   Updated: 2020/01/31 16:18:38 by rofernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 size_t	ft_strlen(const char *str);
 char	*ft_strcpy(char *dst, const char *src);
@@ -42,5 +43,25 @@ int		main(int ac, char **av)
 	printf("### FT_WRITE ###\n");
 	printf(" %zd\n", write(1, av[1], strlen(av[1])));
 	printf(" %zd\n", ft_write(1, av[1], strlen(av[1])));
+
+	char buffer[33];
+	int fd;
+	int ret;
+
+	fd = open(av[1], O_RDONLY);
+	printf("### FT_READ ###\n");
+	ret = read(fd, buffer, 32);
+	// ret = ft_read(fd, buffer, 32);
+	buffer[ret] = 0;
+	printf("fd: %d, ret: %d, buffer :\n%s\n", fd, ret, buffer);
+	ret = read(fd, buffer, 32);
+	// ret = ft_read(fd, buffer, 32);
+	buffer[ret] = 0;
+	printf("fd: %d, ret: %d, buffer :\n%s\n", fd, ret, buffer);
+	ret = read(fd, buffer, 32);
+	// ret = ft_read(fd, buffer, 32);
+	buffer[ret] = 0;
+	printf("fd: %d, ret: %d, buffer :\n%s\n", fd, ret, buffer);
+	close(fd);
 	return (0);
 }
