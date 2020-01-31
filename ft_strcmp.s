@@ -10,7 +10,7 @@ compbyte:										; rdi = s1, rsi = s2
 				inc		rcx						; rcx++
 				jmp		compbyte				; loop.
 endloop:
-				movzx	rax, byte[rdi + rcx]	; movzx moves s1 in rax and completes remaining bits with 0.
+				movzx	rax, byte[rdi + rcx]	; movzx moves s1 in rax and extends with 0.
 				movzx	rbx, byte[rsi + rcx]	; same in rbx.
 				sub		rax, rbx				; rax <- s1 - s2.
 				ret								; return rax.
