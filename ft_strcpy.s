@@ -1,6 +1,8 @@
 global	_ft_strcpy
 section	.text
-_ft_strcpy:						; rdi = dst and rsi = src
+_ft_strcpy:							; rdi = dst and rsi = src
+		cmp		rsi, 0				; test if src = NULL
+		jz		endloop
 		xor		rcx, rcx			; put rcx to 0.
 		xor		rbx, rbx			; put temp var to 0.
 copybyte:

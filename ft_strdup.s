@@ -2,10 +2,10 @@ global	_ft_strdup
 section	.text
 extern  _malloc
 _ft_strdup:							; str stocked in rdi.
-		cmp		rdi, 0
+		cmp		rdi, 0				; test if str = NULL
 		jz		exit_fail
 		xor		rcx, rcx			; counter = 0.
-		xor		rbx, rbx
+		xor		rbx, rbx			; put tmp string to 0
 len:
 		cmp		byte[rdi + rcx], 0	; comparison between str and 0 (end of string).
 		je		mem_alloc			; test if previous comparison is equal to 0. If yes, jump to malloc.

@@ -2,11 +2,17 @@ global	_ft_strcmp
 section	.text
 _ft_strcmp:
 		xor		rcx, rcx				; rcx <- 0
-compbyte:										; rdi = s1, rsi = s2
-		cmp		byte[rsi + rcx], 0		; check if end of string s2.
-		jz		endloop
+		xor		rbx, rbx
+		xor		rdx, rdx
+compbyte:								; rdi = s1, rsi = s2.
+		mov		bl, byte[rdi + rcx]		; store str[i] in tmp.
+		mov		dl, byte[rsi + rcx]
 		cmp		byte[rdi + rcx], 0		; check if end of string s1.
 		jz		endloop
+		cmp		byte[rsi + rcx], 0		; check if end of string s2.
+		jz		endloop
+		cmp		bl, dl					; compare if s1[i] = s2[i].
+		jne		endloop					; if not end of function.
 		inc		rcx						; rcx++
 		jmp		compbyte				; loop.
 endloop:
