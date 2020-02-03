@@ -6,7 +6,7 @@
 /*   By: rofernan <rofernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 12:05:52 by rofernan          #+#    #+#             */
-/*   Updated: 2020/01/31 17:46:54 by rofernan         ###   ########.fr       */
+/*   Updated: 2020/02/03 10:22:28 by rofernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ int		main(int ac, char **av)
 {
 	(void)ac;
 	(void)av;
-	char buffer1[33];
-	char buffer2[33];
-	int fd1;
-	int fd2;
-	int ret1;
-	int ret2;
+	// char buffer1[33];
+	// char buffer2[33];
+	// int fd1;
+	// int fd2;
+	// int ret1;
+	// int ret2;
 
 	printf("### FT_STRLEN ###\n");
 	// printf("   strlen: %d\n", (int)strlen(av[1]));
@@ -46,41 +46,51 @@ int		main(int ac, char **av)
 	// printf("   strcmp: %d\n", strcmp(av[1], av[2]));
 	// printf("ft_strcmp: %d\n\n", ft_strcmp(av[1], av[2]));
 
-	fd1 = open(av[1], O_RDONLY);
-	fd2 = open(av[1], O_RDONLY);
+	// fd1 = open(av[1], O_RDONLY);
+	// fd2 = open(av[1], O_RDONLY);
 
 	printf("### FT_WRITE ###\n");
-	printf(" %zd\n", write(1, av[1], strlen(av[1])));
-	printf(" %zd\n\n", ft_write(1, av[1], strlen(av[1])));
+	// printf(" %zd\n", write(1, av[1], strlen(av[1])));
+	// printf(" %zd\n\n", ft_write(1, av[1], strlen(av[1])));
 
-	close(fd1);
-	close(fd2);
+	// close(fd1);
+	// close(fd2);
 
-	fd1 = open(av[1], O_RDONLY);
-	fd2 = open(av[1], O_RDONLY);
+	// fd1 = open(av[1], O_RDONLY);
+	// fd2 = open(av[1], O_RDONLY);
 
 	printf("### FT_READ ###\n");
 
-	ret1 = read(fd1, buffer1, 32);
-	ret2 = ft_read(fd2, buffer2, 32);
-	buffer1[ret1] = 0;
-	buffer2[ret2] = 0;
-	printf("   read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd1, ret1, buffer1);
-	printf("ft_read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd2, ret2, buffer2);
-	ret1 = read(fd1, buffer1, 32);
-	ret2 = ft_read(fd2, buffer2, 32);
-	buffer1[ret1] = 0;
-	buffer2[ret2] = 0;
-	printf("   read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd1, ret1, buffer1);
-	printf("ft_read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd2, ret2, buffer2);
-	ret1 = read(fd1, buffer1, 32);
-	ret2 = ft_read(fd2, buffer2, 32);
-	buffer1[ret1] = 0;
-	buffer2[ret2] = 0;
-	printf("   read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd1, ret1, buffer1);
-	printf("ft_read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd2, ret2, buffer2);
-	close(fd1);
-	close(fd2);
+	// ret1 = read(fd1, buffer1, 32);
+	// ret2 = ft_read(fd2, buffer2, 32);
+	// buffer1[ret1] = 0;
+	// buffer2[ret2] = 0;
+	// printf("   read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd1, ret1, buffer1);
+	// printf("ft_read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd2, ret2, buffer2);
+	// ret1 = read(fd1, buffer1, 32);
+	// ret2 = ft_read(fd2, buffer2, 32);
+	// buffer1[ret1] = 0;
+	// buffer2[ret2] = 0;
+	// printf("   read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd1, ret1, buffer1);
+	// printf("ft_read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd2, ret2, buffer2);
+	// ret1 = read(fd1, buffer1, 32);
+	// ret2 = ft_read(fd2, buffer2, 32);
+	// buffer1[ret1] = 0;
+	// buffer2[ret2] = 0;
+	// printf("   read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd1, ret1, buffer1);
+	// printf("ft_read:  fd: %d, ret: %d, buffer :\n%s\n\n", fd2, ret2, buffer2);
+	// close(fd1);
+	// close(fd2);
+
+	printf("### FT_STRDUP ###\n");
+
+	char *str1;
+	char *str2;
+
+	str1 = strdup(av[1]);
+	str2 = ft_strdup(av[1]);
+	printf("%s\n", str1);
+	printf("%s\n\n", str2);
 
 	return (0);
 }
