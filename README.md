@@ -21,4 +21,4 @@ Use rules ```make``` and ```make main``` to respectively create the library liba
 ```
 ./libasm [arg1] [arg2] ...
 ```
-Follow the instructions when executing the main.
+Follow the instructions when executing the program.
