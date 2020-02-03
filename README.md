@@ -2,7 +2,7 @@
 ## Summary
 The aim of this project is to get familiar with assembly language.
 ## Summary
-The following functions must be rewritten in assembly lamguage:
+The following functions must be rewritten in assembly language:
 * ft_strlen (man 3 strlen)
 * ft_strcpy (man 3 strcpy)
 * ft_strcmp (man 3 strcmp)
@@ -11,7 +11,7 @@ The following functions must be rewritten in assembly lamguage:
 * ft_strdup (man 3 strdup, call to malloc allowed)
 ## Instructions
 * the code must be written in 64 bits ASM, beware of the calling convention
-* the files must be named "[name].s", inline ASM not allowed
+* the files must be named "*.s", inline ASM not allowed
 * the code must be compiled with nasm
 * the code must be written with the Intel syntax, not the AT&T
 * the library must be named libasm.a
