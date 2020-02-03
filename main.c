@@ -6,7 +6,7 @@
 /*   By: rofernan <rofernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 12:05:52 by rofernan          #+#    #+#             */
-/*   Updated: 2020/02/03 12:49:18 by rofernan         ###   ########.fr       */
+/*   Updated: 2020/02/03 13:53:11 by rofernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	test_strlen(char *str)
 	printf("ft_strlen: %d\n", (int)ft_strlen(str));
 }
 
-void	test_strcpy(char* dest, char *src)
+void	test_strcpy(char *dest, char *src)
 {
 	char *str1;
 	char *str2;
