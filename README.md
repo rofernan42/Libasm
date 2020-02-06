@@ -17,6 +17,10 @@ The following functions must be rewritten in assembly language:
 * the library must be named libasm.a
 ## Compilation
 Use rules ```make``` and ```make main``` to respectively create the library libasm.a and to compile with the main.c file.
+To create an executable:
+```
+gcc -Wall -Wextra -Werror -L. -lasm main.c
+```
 ## Execution
 ```
 ./libasm [arg1] [arg2] ...

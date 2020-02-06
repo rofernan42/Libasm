@@ -6,7 +6,7 @@
 #    By: rofernan <rofernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by rofernan          #+#    #+#              #
-#    Updated: 2020/02/03 10:59:01 by rofernan         ###   ########.fr        #
+#    Updated: 2020/02/06 12:19:16 by rofernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ $(OBJS_PATH)/%.o:		./%.s
 						@echo "\033[33m$<\033[0m compilated	[${NAME}]"
 
 main:					$(NAME)
-						gcc $(CFLAGS) main.c $(NAME) -o $(PROG)
+						gcc $(CFLAGS) -L. -lasm main.c -o $(PROG)
 
 clean:
 						rm -rf $(OBJS) $(OBJS_BONUS)
