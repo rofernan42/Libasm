@@ -6,7 +6,7 @@
 /*   By: rofernan <rofernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 12:05:52 by rofernan          #+#    #+#             */
-/*   Updated: 2020/02/03 13:53:11 by rofernan         ###   ########.fr       */
+/*   Updated: 2020/03/06 13:57:07 by rofernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,6 @@ int		main(int ac, char **av)
 			test_strdup(av[2]);
 	}
 	else
-		printf("Parameters missing.\n");
+		printf("Parameters missing.\nUsage example: ./libasm 4 'bonjour'\n");
 	return (0);
 }
