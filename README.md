@@ -1,4 +1,4 @@
-# Libasm
+# Libasm (42 project)
 ## Summary
 The aim of this project is to get familiar with assembly language.
 ## Summary
